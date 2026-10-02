@@ -46,18 +46,23 @@ A consumer AI assistant for knowledge work that runs entirely on free models, to
 
 ## Demo
 <table width="100%">
+  <tbody>
   <tr>
     <td colspan="6" align="center" valign="top">
       <img src="assets/1789997964571.png" alt="Central first screen" width="100%"><br>
       <sub><b>Calming first screen</b></sub>
     </td>
   </tr>
+  </tbody>
+  <tbody>
   <tr>
     <td colspan="6" align="center" valign="top">
       <img src="assets/1789997893027.png" alt="Knowledge Base workspace" width="100%"><br>
       <sub><b>Knowledge Base</b></sub>
     </td>
   </tr>
+  </tbody>
+  <tbody>
   <tr>
     <td colspan="2" align="center" valign="top" width="33%">
       <img src="assets/1789998416702.png" alt="Personalization panel" height="300"><br>
@@ -72,6 +77,7 @@ A consumer AI assistant for knowledge work that runs entirely on free models, to
       <sub><b>Tool integrations</b></sub>
     </td>
   </tr>
+  </tbody>
 </table>
 
 ## System Design
