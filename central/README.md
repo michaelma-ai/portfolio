@@ -1,7 +1,7 @@
 # Central Assistant
 [![Central demo](https://img.shields.io/badge/Central-Try%20the%20demo-1a7f5a?style=flat-square)](https://michaelma-central.vercel.app/) [![Eval Harness README](https://img.shields.io/badge/Eval%20Harness-README-0b3d91?style=flat-square)](https://github.com/michaelma-ai/portfolio/blob/main/eval_harness/README.md)
 
-Consumer AI assistant harness focused on knowledge work with a calming UI offering 3-tier model router and LangGraph orchestration to deliver on chat, multi-step agentic AI across 37 tool/MCP integrations with HITL approval gates, alongside RAG, safety guardrails, personalization/memory, trace observability, and graceful failure recovery at $0 inference cost.
+An agentic AI assistant for knowledge work at \$0 inference cost: 37 tools across email, calendar, documents and the web in one calm interface, with memory, safety guardrails and approval before it acts.
 
 ## The Problem and the Solution
 A consumer AI assistant for knowledge work that runs entirely on free models, tools and frameworks, so paid token capacity stays reserved for agentic coding. **Vision:** starting from this MVP, to become the one application for light-to-moderate knowledge work. Each row pairs a problem a busy knowledge worker faces with what Central does about it.
@@ -45,16 +45,16 @@ A consumer AI assistant for knowledge work that runs entirely on free models, to
 </table>
 
 ## Demo
-<table>
+<table width="100%">
   <tr>
     <td colspan="6" align="center" valign="top">
-      <img src="assets/1789997964571.png" alt="Central first screen" width="855"><br>
+      <img src="assets/1789997964571.png" alt="Central first screen" width="100%"><br>
       <sub><b>Calming first screen</b></sub>
     </td>
   </tr>
   <tr>
     <td colspan="6" align="center" valign="top">
-      <img src="assets/1789997893027.png" alt="Knowledge Base workspace" width="855"><br>
+      <img src="assets/1789997893027.png" alt="Knowledge Base workspace" width="100%"><br>
       <sub><b>Knowledge Base</b></sub>
     </td>
   </tr>
