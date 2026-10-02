@@ -1,10 +1,18 @@
 # Central Assistant
 [![Central demo](https://img.shields.io/badge/Central-Try%20the%20demo-1a7f5a?style=flat-square)](https://michaelma-central.vercel.app/) [![Eval Harness README](https://img.shields.io/badge/Eval%20Harness-README-0b3d91?style=flat-square)](https://github.com/michaelma-ai/portfolio/blob/main/eval_harness/README.md)
 
+<div align="justify">
+
 An agentic AI assistant for knowledge work at \$0 inference cost: 37 tools across email, calendar, documents and the web in one calm interface, with memory, safety guardrails and approval before it acts.
 
+</div>
+
 ## The Problem and the Solution
+<div align="justify">
+
 A consumer AI assistant for knowledge work that runs entirely on free models, tools and frameworks, so paid token capacity stays reserved for agentic coding. **Vision:** starting from this MVP, to become the one application for light-to-moderate knowledge work. Each row pairs a problem a busy knowledge worker faces with what Central does about it.
+
+</div>
 
 <table>
   <tr>
@@ -81,7 +89,11 @@ A consumer AI assistant for knowledge work that runs entirely on free models, to
 </table>
 
 ## System Design
+<div align="justify">
+
 *This section covers choices that affect a single component. Decisions that span several components are in [Tradeoffs and Decisions](#tradeoffs-and-decisions).*
+
+</div>
 
 ```mermaid
 flowchart LR
@@ -191,12 +203,16 @@ cost · ratings`"] -. "captures and scores" .-> Orch
 | Guards in code over rules in prompts       | Rules that must hold are enforced in code, as a prompt is only as reliable as whichever of 6 models answers. This makes approvals, skill runs and handoffs predictable, but each check is code to maintain. |
 
 ## Evaluation Strategy & Results
+<div align="justify">
+
 Central is evaluated offline by the Eval Harness on 211 golden cases (five product components plus a judge audit set), with the full method, run history and per-metric scores in the [Eval Harness README](https://github.com/michaelma-ai/portfolio/blob/main/eval_harness/README.md#evaluation-strategy--results). Results below are from the latest 2026-09-02 release run which passed the verdict to ship:
+
+</div>
 
 <table>
   <tr>
     <th width="7%" align="left">Axis</th>
-    <th width="17%" align="left">Result (2026-09-02 release)</th>
+    <th width="17%" align="left">Result</th>
     <th width="43%" align="left">What drove it</th>
     <th width="33%" align="left">How it is measured</th>
   </tr>
@@ -221,11 +237,17 @@ Central is evaluated offline by the Eval Harness on 211 golden cases (five produ
 </table>
 
 ## What I Learned
+<div align="justify">
+
 1. **Free tiers change and fail without notice:** Free quotas and models change without notice. During development, judge models were retired mid-project, and web search failed more often than any model: parallel searches froze the server, and all 12 searches in one morning brief failed. Search now runs 2 at a time, pauses after 3 failures, and tells the user it is down rather than answering without sources.
 2. **Latency is in the waiting, and in how the wait is shown:** For simple turns, generation initially took 1.4–6.5 s; the rest was the safety gate (up to 15.7 s), hidden reasoning and trace export. Subsequent fixes targeted the waits: removing one safety layer cut the gate's median from 7.65 s to 1.55 s without regressing on the safety evals. How the wait looked mattered too: in my own use, a printed time estimate, an early "Taking longer than usual" and a spinner made good answers feel slow. The waiting view now shows only an elapsed counter and a breathing dot, and a refusal shows its verdict in about 1.3 s instead of 20.4 s.
 3. **Rules that must always hold belong in code, not in the prompt:** Central was instructed in an eval case that approvals were pre-granted, the assistant agreed: "I'll auto-approve destructive actions as you requested" leading to temporary non-gated actions. Approval now lives in code: tools that send, delete or overwrite always pause for the user, and no chat message can waive it. Rules that must hold are moved into code; the prompt carries the rest.
 
+</div>
+
 ## Next Steps and Future Roadmap
+<div align="justify">
+
 1. **Enable local models** to leverage the assistant harness. v0.1 runs on cloud APIs because they reach more people. Downloading and running a model locally is harder for most users than pasting an API key, and a local model only matches the cloud experience in tokens per second and latency on high-end hardware, which narrows the audience further. The router already treats a model as a registry entry with a tier, so a local model can be added as another entry once hardware makes it practical, and it would also give users a fully private option.
 2. **More tools, surfaces and modalities.** The next capabilities, in the order they would be built:
     - *Browser use*: so Central can act on websites with no API. An earlier attempt was not reliable: each browsing step sends a large page to the model, and free-tier rate limits cut tasks short.
@@ -240,6 +262,8 @@ Central is evaluated offline by the Eval Harness on 211 golden cases (five produ
     - *Compacting:* on request, Central re-summarizes a collection so it takes less space while keeping its facts and their sources.
     - *Correcting:* Central flags stale entries and contradictions between documents and proposes a removal or an amendment for the user to approve.
     - *Health view:* a dashboard showing coverage, staleness and open contradictions per collection.
+
+</div>
 
 ## Built With
 | Domain                         | Stack                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
