@@ -1,5 +1,4 @@
 # AI Product Manager Portfolio
----
 ## Overview:
 <table width="100%">
   <tr>
