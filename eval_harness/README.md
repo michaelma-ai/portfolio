@@ -159,11 +159,11 @@ Eval Harness evaluates Central offline on 211 golden cases: 157 across five prod
 
 <table>
   <tr>
-    <th width="15%">Component</th>
+    <th width="21%">Component</th>
     <th width="18%">North star</th>
     <th width="6%" align="center">Cases</th>
     <th width="24%">Key P0 gates</th>
-    <th width="37%">What the cases test</th>
+    <th width="31%">What the cases test</th>
   </tr>
   <tr>
     <td valign="top"><b>Model Selection</b><br>Which models should Central serve?</td>
