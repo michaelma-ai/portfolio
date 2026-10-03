@@ -28,7 +28,7 @@ Built for small teams shipping AI agents without a dedicated eval team, who ofte
   <tr>
     <td valign="top"><b>Trusting the LLM Judge</b></td>
     <td valign="top">An LLM judge is itself a model: if it disagrees with people, its scores mislead.</td>
-    <td valign="top">Judge scores count only when Cohen's κ against 54 human-labeled cases is at least 0.60. On the 2026-09-02 run, the judge agreed on 51 of 54 (94% observed agreement, κ 0.74).</td>
+    <td valign="top">Judge scores count only when Cohen's κ against 54 human-labeled cases is at least 0.60.</td>
   </tr>
   <tr>
     <td valign="top"><b>Checking Every Step, Not Just the Reply</b></td>
