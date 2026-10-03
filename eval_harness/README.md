@@ -145,11 +145,28 @@ Eval Harness evaluates Central offline on 211 golden cases: 157 across five prod
 </div>
 
 ### Part 1: Evaluation Strategy
-| Axis    | How it is measured                                                                                                                                                | Role in the release                                           |
-| ---------| -------------------------------------------------------------------------------------------------------------------------------------------------------------------| ---------------------------------------------------------------|
-| Quality | Each golden case passes, fails or is undecided (for example, the judge was down); undecided never counts as a pass. Cases roll up into P0 metrics with thresholds | Gates the release: all 34 offline P0 rows must meet threshold |
-| Latency | End-to-end time per case and time to first token, from Phoenix traces, at p50 and p95                                                                             | Reported, not gated.                                          |
-| Cost    | Measured LLM calls × assumed tokens × a mid-range open-weight price (\$0.60 / \$2.00 per 1M), next to actual spend (\$0)                                          | Reported next to the verdict, not gated                       |
+<table>
+  <tr>
+    <th width="10%" align="left">Axis</th>
+    <th width="60%" align="left">How it is measured</th>
+    <th width="30%" align="left">Role in the release</th>
+  </tr>
+  <tr>
+    <td valign="top">Quality</td>
+    <td valign="top">Each golden case passes, fails or is undecided (for example, the judge was down); undecided never counts as a pass. Cases roll up into P0 metrics with thresholds</td>
+    <td valign="top">Gates the release: all 34 offline P0 rows must meet threshold</td>
+  </tr>
+  <tr>
+    <td valign="top">Latency</td>
+    <td valign="top">End-to-end time per case and time to first token, from Phoenix traces, at p50 and p95</td>
+    <td valign="top">Reported, not gated.</td>
+  </tr>
+  <tr>
+    <td valign="top">Cost</td>
+    <td valign="top">Measured LLM calls × assumed tokens × a mid-range open-weight price (&#36;0.60 / &#36;2.00 per 1M), next to actual spend (&#36;0)</td>
+    <td valign="top">Reported next to the verdict, not gated</td>
+  </tr>
+</table>
 
 <div align="justify">
 
