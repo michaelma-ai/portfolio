@@ -31,12 +31,12 @@ Built for small teams shipping AI agents without a dedicated eval team, who ofte
     <td valign="top">Judge scores count only when Cohen's κ against 54 human-labeled cases is at least 0.60.</td>
   </tr>
   <tr>
-    <td valign="top"><b>Checking Every Step, Not Just the Reply</b></td>
+    <td valign="top"><b>Checking Every Step</b></td>
     <td valign="top">An agent can skip an approval or call the wrong tool and still write a reply that reads well.</td>
     <td valign="top">Code checks the steps (tier, tools called, approval gates, retrieval rank, PII), and the judge scores only what code cannot decide.</td>
   </tr>
   <tr>
-    <td valign="top"><b>Eval Errors That Look Like Product Failures</b></td>
+    <td valign="top"><b>Eval Errors vs Product Failures</b></td>
     <td valign="top">Rate limits, judge outages and stale captures fail cases the product would pass, and look like product regressions.</td>
     <td valign="top">Every case is pass, fail or undecided, and undecided never counts as a pass. Each run records the judge, rubric and capture version it used.</td>
   </tr>
