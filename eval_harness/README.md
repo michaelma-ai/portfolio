@@ -166,42 +166,42 @@ Eval Harness evaluates Central offline on 211 golden cases: 157 across five prod
     <th width="37%">What the cases test</th>
   </tr>
   <tr>
-    <td valign="top">Model Selection<br><sub><i>Which models should Central serve?</i></sub></td>
+    <td valign="top"><b>Model Selection</b><br>Which models should Central serve?</td>
     <td valign="top">End-to-end multi-turn task success (correct and safe) ≥ 85%</td>
     <td valign="top" align="center">34</td>
     <td valign="top">Tool call correctness ≥ 98% exact match, destructive-action gating 100%, prompt-injection resistance ≥ 95%</td>
     <td valign="top">7 prompt-injection resistance, 5 tool call correctness, 5 answer correctness, 5 single-turn task success, 5 multi-turn task success, 4 answer faithfulness, 3 destructive-action gating</td>
   </tr>
   <tr>
-    <td valign="top">Central Assistant<br><sub><i>Does it complete the request without overstepping?</i></sub></td>
+    <td valign="top"><b>Central Assistant</b><br>Does it complete the request without overstepping?</td>
     <td valign="top">Request success rate</td>
     <td valign="top" align="center">24</td>
     <td valign="top">Approval gate integrity 100%, task completion rate ≥ 90%, action-claim faithfulness ≥ 99%</td>
     <td valign="top">5 task completion rate, 4 approval gate integrity, 3 each for action-claim faithfulness, answer correctness, answer groundedness, post-approval resume correctness, and over-action and scope adherence</td>
   </tr>
   <tr>
-    <td valign="top">Knowledge Base<br><sub><i>Does it retrieve the right source and answer only from it?</i></sub></td>
+    <td valign="top"><b>Knowledge Base</b><br>Does it retrieve the right source and answer only from it?</td>
     <td valign="top">% of queries correct, relevant and faithful</td>
     <td valign="top" align="center">30</td>
     <td valign="top">Recall@K ≥ 0.90, faithfulness (groundedness) ≥ 0.95</td>
     <td valign="top">10 Recall@K, Precision@K and F1@K, 7 faithfulness (groundedness), 7 answer correctness, 6 answer relevance</td>
   </tr>
   <tr>
-    <td valign="top">Personalization<br><sub><i>Remembers the right things, and nothing it shouldn't?</i></sub></td>
+    <td valign="top"><b>Personalization</b><br>Remembers the right things, and nothing it shouldn't?</td>
     <td valign="top">Personalized answer preferred ≥ 75% vs baseline</td>
     <td valign="top" align="center">49</td>
     <td valign="top">Sensitive PII write rate ≈ 0%, profile update correctness ≥ 95%, personalization helpfulness ≥ 75% preferred vs baseline</td>
     <td valign="top">13 profile update correctness, 10 sensitive PII write rate, 9 constitution adherence, 6 profile grounded recall, 4 profile fact-retention rate, 4 personalization helpfulness, 3 preference adherence</td>
   </tr>
   <tr>
-    <td valign="top">Safety<br><sub><i>Catches harm without over-refusing?</i></sub></td>
+    <td valign="top"><b>Safety</b><br>Catches harm without over-refusing?</td>
     <td valign="top">Safe-handling rate: harmful inputs caught, legitimate requests passed</td>
     <td valign="top" align="center">20</td>
     <td valign="top">Recall (safety coverage) ≥ 99%, adversarial attack success rate ≤ 2%, over-refusal rate ≤ 2%</td>
     <td valign="top">15 gate classification, scored for recall, precision, F2, over-refusal rate and pass-through rate; 5 adversarial attack success rate</td>
   </tr>
   <tr>
-    <td valign="top">Judge audit<br><sub><i>Can the judge be trusted?</i></sub></td>
+    <td valign="top"><b>Judge audit</b><br>Can the judge be trusted?</td>
     <td valign="top">Judge–human agreement (Cohen's κ)</td>
     <td valign="top" align="center">54</td>
     <td valign="top">κ ≥ 0.60</td>
