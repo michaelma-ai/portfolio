@@ -23,7 +23,7 @@ Built for small teams shipping AI agents without a dedicated eval team, who ofte
   <tr>
     <td valign="top"><b>Knowing When It's Safe to Ship</b></td>
     <td valign="top">A prompt edit, a model swap or a provider change can break an agent, and small teams often ship after spot-checks.</td>
-    <td valign="top">Captures real outputs from the served product, scores them against 211 golden cases in six golden sets, and gives one SHIP or HOLD verdict: SHIP only if all 34 offline P0 metrics meet their thresholds.</td>
+    <td valign="top">Captures real outputs from the served product, scores them against 211 golden cases in six golden sets, and gives one SHIP or HOLD verdict.</td>
   </tr>
   <tr>
     <td valign="top"><b>Trusting the LLM Judge</b></td>
