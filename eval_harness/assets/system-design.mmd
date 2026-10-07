@@ -7,18 +7,27 @@ served components`"] --> Capture["`**Capture**
 real output per case`"]
     ModelEvals["`**Model Evals**
 served · fast · deep
-benchmarks`"] -. "chooses models for" .-> Central
+benchmarks`"] -. "`chooses
+models for`" .-> Central
     Capture --> Score["`**Deterministic scorers**
 tier · tools · gate
 retrieval · PII`"]
     Capture --> Judge["`**LLM judge**
-binary rubric
-outside serving tiers`"]
+binary pass/fail rubric
+independent of Central's models`"]
+    Score --> Metrics["`**P0 metrics**
+33 across 5 components
+each has cases and
+meets its threshold`"]
+    Judge --> Metrics
+    Judge -- "`audit
+verdicts`" --> Kappa["`**Cohen's κ**
+judge vs human labels
+≥ 0.60`"]
     Labels["`**Human labels**
-54 audit cases`"] --> Kappa["`**Cohen's κ**
-≥ 0.60 to count`"]
-    Judge --> Kappa
-    Score --> Gate{"`**Release gate**`"}
+54 audit cases`"] --> Kappa
+    Metrics --> Gate{"`**Release gate**
+both pass`"}
     Kappa --> Gate
     Gate --> Dash["`**Dashboard**
 SHIP / HOLD`"]
