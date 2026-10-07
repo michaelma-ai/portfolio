@@ -4,7 +4,8 @@ flowchart LR
 137 metric specs`"] --> Capture
     Central["`**Central**
 served components`"] --> Capture["`**Capture**
-real output per case`"]
+real output
+per case`"]
     ModelEvals["`**Model Evals**
 served · fast · deep
 benchmarks`"] -. "`chooses
@@ -14,7 +15,8 @@ tier · tools · gate
 retrieval · PII`"]
     Capture --> Judge["`**LLM judge**
 binary pass/fail rubric
-independent of Central's models`"]
+independent of
+Central's models`"]
     Score --> Metrics["`**P0 metrics**
 33 across 5 components
 each has cases and
