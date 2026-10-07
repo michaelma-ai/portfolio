@@ -95,7 +95,7 @@ A consumer AI assistant for knowledge work that runs entirely on free models, to
 
 </div>
 
-<a href="assets/system-design.png"><img src="assets/system-design.png" alt="Central system design: the user interface, safety and personalization pass each request to the agent orchestration supervisor and its four workers, which call the knowledge base and tools; the model router and eval instrumentation attach to orchestration" width="100%"></a>
+<a href="assets/system-design.svg"><img src="assets/system-design.svg" alt="Central system design: the user interface, safety and personalization pass each request to the agent orchestration supervisor and its four workers, which call the knowledge base and tools; the model router and eval instrumentation attach to orchestration" width="100%"></a>
 
 <table>
   <tr>

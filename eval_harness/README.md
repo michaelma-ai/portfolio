@@ -90,7 +90,7 @@ Built for small teams shipping AI agents without a dedicated eval team, who ofte
 
 </div>
 
-<a href="assets/system-design.png"><img src="assets/system-design.png" alt="Eval Harness system design: the golden set and Central feed capture; deterministic scorers and the LLM judge score each output; human labels validate the judge through Cohen's kappa; the release gate sends SHIP or HOLD to the dashboard" width="100%"></a>
+<a href="assets/system-design.svg"><img src="assets/system-design.svg" alt="Eval Harness system design: the golden set and Central feed capture; deterministic scorers and the LLM judge score each output; human labels validate the judge through Cohen's kappa; the release gate sends SHIP or HOLD to the dashboard" width="100%"></a>
 
 <table>
 <tr><th width="17%">Component</th><th width="25%">Purpose</th><th width="33%">What it is built from</th><th width="25%">Key decision and trade-off</th></tr>
