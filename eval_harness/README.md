@@ -90,33 +90,7 @@ Built for small teams shipping AI agents without a dedicated eval team, who ofte
 
 </div>
 
-```mermaid
-flowchart LR
-    Golden["`**Golden set**
-211 cases
-137 metric specs`"] --> Capture
-    Central["`**Central**
-served components`"] --> Capture["`**Capture**
-real output per case`"]
-    ModelEvals["`**Model Evals**
-served · fast · deep
-benchmarks`"] -. "chooses models for" .-> Central
-    Capture --> Score["`**Deterministic scorers**
-tier · tools · gate
-retrieval · PII`"]
-    Capture --> Judge["`**LLM judge**
-binary rubric
-outside serving tiers`"]
-    Labels["`**Human labels**
-54 audit cases`"] --> Kappa["`**Cohen's κ**
-≥ 0.60 to count`"]
-    Judge --> Kappa
-    Score --> Gate{"`**Release gate**`"}
-    Kappa --> Gate
-    Gate --> Dash["`**Dashboard**
-SHIP / HOLD`"]
-    Capture -. "traces" .-> Phoenix["`**Arize Phoenix**`"]
-```
+<a href="assets/system-design.png"><img src="assets/system-design.png" alt="Eval Harness system design: the golden set and Central feed capture; deterministic scorers and the LLM judge score each output; human labels validate the judge through Cohen's kappa; the release gate sends SHIP or HOLD to the dashboard" width="100%"></a>
 
 <table>
 <tr><th width="17%">Component</th><th width="25%">Purpose</th><th width="33%">What it is built from</th><th width="25%">Key decision and trade-off</th></tr>

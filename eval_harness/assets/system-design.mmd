@@ -1,0 +1,25 @@
+flowchart LR
+    Golden["`**Golden set**
+211 cases
+137 metric specs`"] --> Capture
+    Central["`**Central**
+served components`"] --> Capture["`**Capture**
+real output per case`"]
+    ModelEvals["`**Model Evals**
+served · fast · deep
+benchmarks`"] -. "chooses models for" .-> Central
+    Capture --> Score["`**Deterministic scorers**
+tier · tools · gate
+retrieval · PII`"]
+    Capture --> Judge["`**LLM judge**
+binary rubric
+outside serving tiers`"]
+    Labels["`**Human labels**
+54 audit cases`"] --> Kappa["`**Cohen's κ**
+≥ 0.60 to count`"]
+    Judge --> Kappa
+    Score --> Gate{"`**Release gate**`"}
+    Kappa --> Gate
+    Gate --> Dash["`**Dashboard**
+SHIP / HOLD`"]
+    Capture -. "traces" .-> Phoenix["`**Arize Phoenix**`"]

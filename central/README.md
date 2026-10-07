@@ -95,58 +95,7 @@ A consumer AI assistant for knowledge work that runs entirely on free models, to
 
 </div>
 
-```mermaid
-flowchart LR
-    User(["`User`"]) --> UI["`**User Interface**
-live status
-approval cards`"]
-    UI --> Safety["`**Safety**
-regex → 2 guards
-→ adjudicator`"]
-    Safety --> Personal["`**Personalization**
-profile
-cross-thread context`"]
-    Personal --> Supervisor
-
-    subgraph Orch["`**Agent Orchestration**`"]
-        direction TB
-        Supervisor["`Supervisor
-answers or delegates`"]
-        Research["`Research`"]
-        Comms["`Comms`"]
-        Content["`Content`"]
-        Skills["`Skills`"]
-        Supervisor --> Research & Comms & Content & Skills
-    end
-
-    Router["`**Model Router**
-3 tiers · 6 models`"] -. "model for each call" .-> Orch
-
-    KB["`**Knowledge Base**
-hybrid search → rerank
-→ cited answer`"]
-    subgraph Tools["`**Tools & Integrations**`"]
-        direction TB
-        Web["`Web
-search · page fetch (MCP)
-YouTube Transcript`"]
-        Workspace["`Google Workspace
-32 tools
-9 need approval`"]
-        Brief["`Morning brief
-Telegram · Gmail`"]
-    end
-
-    Research --> KB
-    Research --> Web
-    Comms --> Workspace
-    Content --> Workspace
-    Skills --> Brief
-
-    Eval["`**Eval Instrumentation**
-golden cases · traces
-cost · ratings`"] -. "captures and scores" .-> Orch
-```
+<a href="assets/system-design.png"><img src="assets/system-design.png" alt="Central system design: the user interface, safety and personalization pass each request to the agent orchestration supervisor and its four workers, which call the knowledge base and tools; the model router and eval instrumentation attach to orchestration" width="100%"></a>
 
 <table>
   <tr>
